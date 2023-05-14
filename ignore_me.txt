@@ -1,0 +1,9 @@
+css font family rule:
+/*
+font-family: 'Georama', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Tomorrow', sans-serif;
+font-family: 'Genos', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
