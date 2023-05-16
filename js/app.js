@@ -52,51 +52,39 @@ if (gender_state === false) {
 
 let q1 = prompt('Do you love reading?');
 let q1_ans = false;
-if (q1 === true) {
+if (q1 === 'yes') {
     alert('Wow, you are awesome!');
     q1_ans = true;
-} else {
+} else if (q1 === 'no') {
     alert('I recommend you to start reading books, it\s good for you brain.');
     q1_ans = false;
+} else {
+    alert('Invalid answer.');
 }
 
+let answers;
 let q2 = prompt('Do you finish your work in time?');
 let q2_ans = false;
-if (q1 === true) {
+if (q2 === 'yes') {
     alert('Great Job, you are awesome!');
-    q1_ans = true;
-} else {
+    q2_ans = true;
+} else if (q2 === 'no') {
     alert('Adding time management to your life has a huge impact on you.');
-    q1_ans = false;
+    q2_ans = false;
+} else {
+    alert('Invalid answer.');
 }
 
-/**
- * TODO: Continue with q3 and the array
- */
-
-
-
-
-
-
-
-
-// let q1 = confirm('Did you finish your assignment?');
-// if (q1 === true) {
-//     alert('Great Job, you are awesome!');
-
-//     let q2 = confirm('Would you like to watch a movie?');
-//     if (q2 === true) {
-//         alert('Alright, have fun!');
-//         let q3 = confirm('Would you like some snack with it?');
-//         if (q3 === true) {
-//             alert('Alright, snacks are on the way!');
-//         } else {
-//             alert('Alright, snacks are not on the way!');
-//         }
-//     } else {
-//         alert('Alright, I highly recommend reading a book or taking a nap 😉');
-//     }
-// } else {
-//     alert('Come on get to work, the assignment won\'t finish it self! 🙄');
-// }
+let q3 = prompt('Do you drink water every morning?');
+let q3_ans = false;
+if (q3 === 'yes') {
+    alert('Great Job, you are on the way to a healthy life!');
+    q3_ans = true;
+} else if (q3 === 'no') {
+    alert('Thats not good, you need to stay hydrated!');
+    q3_ans = false;
+} else {
+    alert('Invalid answer.');
+}
+answers = { Q1: q1_ans, Q2: q2_ans, Q3: q3_ans };
+console.log(answers);
