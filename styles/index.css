@@ -31,7 +31,7 @@ header ul {
     font-size: 18px;
 }
 
-header ul li a {
+a {
     text-decoration: none;
     font-weight: bold;
     color: rgb(220, 220, 220);
@@ -52,8 +52,13 @@ main {
     color: rgb(220, 220, 220);
 }
 
-.side_bar a {
-    color: rgb(220, 220, 220);
+.side_bar ul {
+    list-style: none;
+    padding: 25px;
+}
+
+.side_bar ul li {
+    padding: 50px;
 }
 
 .inner_body {
@@ -80,4 +85,19 @@ footer {
     background-color: rgb(8, 45, 84);
     color: rgb(220, 220, 220);
     bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social_links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social_links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

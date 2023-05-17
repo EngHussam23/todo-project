@@ -1,11 +1,3 @@
-// TODO: 
-// As a user, I would like to answer more questions, so you should add new three (Yes/No) questions.
-// If the input was empty consider the answer as an "invalid" string.
-// Consider putting all the answers into an array.
-// Traverse the array and print the items on the console.
-// Confirm that your code is following the single responsibility rule. Each function should only do one thing.
-// All functions and variables should have a meaningful name (use camelCase).
-
 // userName
 let userName = prompt('Enter your name:');
 console.log(userName);
@@ -59,6 +51,7 @@ if (q1 === 'yes') {
     alert('I recommend you to start reading books, it\s good for you brain.');
     q1_ans = false;
 } else {
+    q1_ans = 'invalid';
     alert('Invalid answer.');
 }
 
@@ -72,6 +65,7 @@ if (q2 === 'yes') {
     alert('Adding time management to your life has a huge impact on you.');
     q2_ans = false;
 } else {
+    q2_ans = 'invalid';
     alert('Invalid answer.');
 }
 
@@ -84,7 +78,12 @@ if (q3 === 'yes') {
     alert('Thats not good, you need to stay hydrated!');
     q3_ans = false;
 } else {
+    q3_ans = 'invalid';
     alert('Invalid answer.');
 }
 answers = { Q1: q1_ans, Q2: q2_ans, Q3: q3_ans };
-console.log(answers);
+printAnswers(answers);
+
+function printAnswers(ans_arr) {
+    console.log(ans_arr);
+}
