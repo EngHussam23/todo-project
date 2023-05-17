@@ -1,3 +1,5 @@
+"use strict";
+
 // userName
 let userName = prompt('Enter your name:');
 console.log(userName);
@@ -6,9 +8,9 @@ console.log(userName);
 let gender = prompt('Enter your gender: (male or female)');
 console.log(gender);
 let gender_state = false;
-if (gender === 'male') {
+if (gender.toLocaleLowerCase() === 'male') {
     gender_state = true;
-} else if (gender === 'female') {
+} else if (gender.toLocaleLowerCase() === 'female') {
     gender_state = true;
 } else {
     gender_state = false;
@@ -44,10 +46,10 @@ if (gender_state === false) {
 
 let q1 = prompt('Do you love reading?');
 let q1_ans = false;
-if (q1 === 'yes') {
+if (q1.toLocaleLowerCase() === 'yes') {
     alert('Wow, you are awesome!');
     q1_ans = true;
-} else if (q1 === 'no') {
+} else if (q1.toLocaleLowerCase() === 'no') {
     alert('I recommend you to start reading books, it\s good for you brain.');
     q1_ans = false;
 } else {
@@ -57,10 +59,10 @@ if (q1 === 'yes') {
 
 let q2 = prompt('Do you finish your work in time?');
 let q2_ans = false;
-if (q2 === 'yes') {
+if (q2.toLocaleLowerCase() === 'yes') {
     alert('Great Job, you are awesome!');
     q2_ans = true;
-} else if (q2 === 'no') {
+} else if (q2.toLocaleLowerCase() === 'no') {
     alert('Adding time management to your life has a huge impact on you.');
     q2_ans = false;
 } else {
@@ -70,10 +72,10 @@ if (q2 === 'yes') {
 
 let q3 = prompt('Do you drink water every morning?');
 let q3_ans = false;
-if (q3 === 'yes') {
+if (q3.toLocaleLowerCase() === 'yes') {
     alert('Great Job, you are on the way to a healthy life!');
     q3_ans = true;
-} else if (q3 === 'no') {
+} else if (q3.toLocaleLowerCase() === 'no') {
     alert('Thats not good, you need to stay hydrated!');
     q3_ans = false;
 } else {
@@ -83,6 +85,8 @@ if (q3 === 'yes') {
 let answers = [];
 answers.push(q1_ans, q2_ans, q3_ans);
 printAnswers(answers);
+
+
 
 function printAnswers(ans_arr) {
     console.log('The user answers on the extra questions');
