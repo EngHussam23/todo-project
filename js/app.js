@@ -55,7 +55,6 @@ if (q1 === 'yes') {
     alert('Invalid answer.');
 }
 
-let answers;
 let q2 = prompt('Do you finish your work in time?');
 let q2_ans = false;
 if (q2 === 'yes') {
@@ -81,9 +80,38 @@ if (q3 === 'yes') {
     q3_ans = 'invalid';
     alert('Invalid answer.');
 }
-answers = { Q1: q1_ans, Q2: q2_ans, Q3: q3_ans };
+let answers = [];
+answers.push(q1_ans, q2_ans, q3_ans);
 printAnswers(answers);
 
 function printAnswers(ans_arr) {
-    console.log(ans_arr);
+    console.log('The user answers on the extra questions');
+    for (let i = 0; i < ans_arr.length; i++) {
+        console.log(ans_arr[i]);
+    }
+}
+
+function rewardUser(ans_arr) {
+    let counter = 0
+    for (let j = 0; j < ans_arr.length; j++) {
+        if (ans_arr[j] === true) {
+            counter++;
+        }
+    }
+
+    switch (counter) {
+        case 1: console.log('You are on the right path, keep pushing forward!');
+            break
+        case 2: console.log('Great Job, Keep the good work!');
+            break;
+        case 3: console.log('You are awesome!, you should give your self a break like watching a movie for example...');
+            break;
+        default: console.log('😕😕😕');
+    }
+
+    thankYouMessage();
+}
+
+function thankYouMessage() {
+    alert('Thank you for taking the time to answer the questions. Hope you enjoyed your time with us!');
 }
